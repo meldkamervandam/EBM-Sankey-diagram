@@ -1,0 +1,56 @@
+{
+  "id": "ebm-live-sankey-diagram",
+  "name": "Live sankey diagram",
+  "description": "Displays sankey diagram with live values.",
+  "version": "1.0.0",
+  "author": "Ecoreflect",
+  "license": "MIT",
+  "inputs": [
+	{
+	  "key": "title",
+	  "type": "Text",
+	  "label": "Title",
+  	  "placeholder": "Leave empty for no title"
+	},
+	{
+	  "key": "subtitle",
+	  "type": "Text",
+	  "label": "Subtitle",
+  	  "placeholder": "Leave empty for not subtitle"
+	},
+	{
+	  "key": "nodes"
+	  "label": "Nodes"
+	  "type": "List",
+	  "itemType": {
+	    "key": "node",
+	    "type": "Group",
+	    "label": "Node",
+	    "summary": {
+	      "label": "{{source.name}} -> {{target.name}}",
+	      "colorField": "colortarget"
+	    },
+	    "children": [
+	      { 
+		    "key": "source",
+			"type": "LiveMetric",
+			"label": "Source value",
+			"required": true 
+		  },
+	      { 
+		    "key": "target", 
+			"type": "LiveMetric", 
+			"label": "Target value", 
+			"required": true 
+		  },
+		  { 
+		    "key": "colorSource", 
+			"type": "Color", 
+			"label": "Color source node, if already defined it does not work", 
+			"required": true 
+		  }
+	    ]
+	  }
+	}
+  ]
+}
