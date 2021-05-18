@@ -19,8 +19,8 @@
   	  "placeholder": "Leave empty for not subtitle"
 	},
 	{
-	  "key": "nodes"
-	  "label": "Nodes"
+	  "key": "nodes",
+	  "label": "Nodes",
 	  "type": "List",
 	  "itemType": {
 	    "key": "node",
